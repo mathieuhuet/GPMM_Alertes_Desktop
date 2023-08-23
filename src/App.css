@@ -1,6 +1,6 @@
 .App {
   height: 100vh;
-  background-color: rgb(158, 202, 158);
+  background-color: #f6f6f6;
   color: whitesmoke;
   display: flex;
   flex-direction: row;

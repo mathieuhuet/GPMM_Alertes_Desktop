@@ -20,7 +20,7 @@ const Login = (props) => {
   return (
     <div className='AppContainer'>
       <div className='Login'>
-
+        ALLO
       </div>
     </div>
   );

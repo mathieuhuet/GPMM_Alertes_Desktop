@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GPMM_ACTIVITY_API } from '../../../secret';
+import { GPMM_ACTIVITY_API } from '../../secret';
 const API = GPMM_ACTIVITY_API
 ? GPMM_ACTIVITY_API
 : 'http://192.168.1.5:10101/bet';
