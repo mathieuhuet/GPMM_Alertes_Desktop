@@ -1,0 +1,40 @@
+.Navbar {
+  width: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #82bf00;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+  position: fixed;
+  background-color: #004638;
+}
+
+.Bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #82bf00;
+}
+
+.Users {
+  height: 99px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #82bf00;
+  font-size: 36px;
+  color: #82bf00;
+}
+
+.Users:hover {
+  cursor: pointer;
+}
+
+.Users:active {
+  height: 94px;
+  width: 94px;
+  border: 3px solid black;
+}

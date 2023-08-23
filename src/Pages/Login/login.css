@@ -1,0 +1,100 @@
+.Login {
+  display: flex;
+  height: 100vh;
+  width: calc(100% - 100px);
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+
+.LoginSection {
+  border: 3px solid black;
+  box-shadow: 4px 4px black;
+  border-radius: 25px;
+  color: white;
+  text-shadow: 2px 2px #000000;
+  margin: 5vh;
+  width: 40vh;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #33883f;
+  background: -webkit-linear-gradient(#33883f, #2f7c33);
+  background: -o-linear-gradient(#33883f, #2f7c33);
+  background: -moz-linear-gradient(#33883f, #2f7c33);
+  background: linear-gradient(#33883f, #2f7c33);
+}
+
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.LoginInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.RegisterSection {
+  border: 3px solid black;
+  box-shadow: 4px 4px black;
+  border-radius: 25px;
+  color: white;
+  text-shadow: 2px 2px #000000;
+  margin: 5vh;
+  width: 50vh;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: #33883f;
+  background: -webkit-linear-gradient(#33883f, #2f7c33);
+  background: -o-linear-gradient(#33883f, #2f7c33);
+  background: -moz-linear-gradient(#33883f, #2f7c33);
+  background: linear-gradient(#33883f, #2f7c33);
+}
+
+.Registerform {
+  height: 40vh;
+}
+
+.RegisterTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-submit {
+  background-color: rgb(163, 106, 0);
+  font-weight: bold;
+  text-shadow: 1px 1px #000000;
+  color: white;
+  height: 30px;
+  width: 20vh;
+  margin: 20px;
+  border-radius: 5px;
+  border: solid 2px white;
+  box-shadow: 2px 2px black;
+}
+
+.form-submit:hover {
+  background-color: #2f7c33;
+}
+
+.form-submit:active {
+  box-shadow: 1px 1px black;
+}
+
+input {
+  border-radius: 6px;
+  border: 1px solid rgb(2, 36, 8);
+  box-shadow: 2px 2px rgb(68, 68, 68);
+  padding: 3px;
+}
