@@ -7,7 +7,7 @@
 .env
 
 # hidden constant
-/src/secret.js
+/src/.secret.js
 
 
 # testing
