@@ -1,0 +1,109 @@
+.Activity {
+  min-width: 70vmin;
+  width: 60vw;
+  border-style: dashed none none none;
+  border-color: #004638;
+  color: #004638;
+  margin: 0vmin 0vmin 1vmin 5vmin;
+  padding: 4vmin 4vmin 4vmin 4vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  -webkit-animation: individualExp 0.25s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: individualExp 0.25s; /* Firefox < 16 */
+   -ms-animation: individualExp 0.25s; /* Internet Explorer */
+    -o-animation: individualExp 0.25s; /* Opera < 12.1 */
+    animation: individualExp 0.25s;
+}
+@keyframes individualExp {
+  from {box-shadow: 1vmin 1vmin black; margin: 0vmin 0vmin 1vmin 4vmin; background-color: #004638; color: #f6f6f6;}
+  to {box-shadow: 0vmin 0vmin black; margin: 0vmin 0vmin 1vmin 5vmin; background-color: #f6f6f6; color: #004638;}
+}
+/* Firefox < 16 */
+@-moz-keyframes individualExp {
+  from {box-shadow: 1vmin 1vmin black; margin: 0vmin 0vmin 1vmin 4vmin; background-color: #004638; color: #f6f6f6;}
+  to {box-shadow: 0vmin 0vmin black; margin: 0vmin 0vmin 1vmin 5vmin; background-color: #f6f6f6; color: #004638;}
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes individualExp {
+  from {box-shadow: 1vmin 1vmin black; margin: 0vmin 0vmin 1vmin 4vmin; background-color: #004638; color: #f6f6f6;}
+  to {box-shadow: 0vmin 0vmin black; margin: 0vmin 0vmin 1vmin 5vmin; background-color: #f6f6f6; color: #004638;}
+}
+/* Internet Explorer */
+@-ms-keyframes individualExp {
+  from {box-shadow: 1vmin 1vmin black; margin: 0vmin 0vmin 1vmin 4vmin; background-color: #004638; color: #f6f6f6;}
+  to {box-shadow: 0vmin 0vmin black; margin: 0vmin 0vmin 1vmin 5vmin; background-color: #f6f6f6; color: #004638;}
+}
+/* Opera < 12.1 */
+@-o-keyframes individualExp {
+  from {box-shadow: 1vmin 1vmin black; margin: 0vmin 0vmin 1vmin 4vmin; background-color: #004638; color: #f6f6f6;}
+  to {box-shadow: 0vmin 0vmin black; margin: 0vmin 0vmin 1vmin 5vmin; background-color: #f6f6f6; color: #004638;}
+}
+
+.Activity:hover {
+  cursor: pointer;
+  background-color: #004638;
+  color: #f6f6f6;
+  margin: 0vmin 0vmin 1vmin 4vmin;
+  box-shadow: 1vmin 1vmin black;
+  -webkit-animation: individualExpHover 0.25s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: individualExpHover 0.25s; /* Firefox < 16 */
+   -ms-animation: individualExpHover 0.25s; /* Internet Explorer */
+    -o-animation: individualExpHover 0.25s; /* Opera < 12.1 */
+    animation: individualExpHover 0.25s;
+}
+@keyframes individualExpHover {
+  from {box-shadow: 0vmin 0vmin black; margin: 0vmin 0vmin 1vmin 5vmin; background-color: #f6f6f6; color: #004638;}
+  to {box-shadow: 1vmin 1vmin black; margin: 0vmin 0vmin 1vmin 4vmin; background-color: #004638; color: #f6f6f6;}
+}
+/* Firefox < 16 */
+@-moz-keyframes individualExpHover {
+  from {box-shadow: 0vmin 0vmin black; margin: 0vmin 0vmin 1vmin 5vmin; background-color: #f6f6f6; color: #004638;}
+  to {box-shadow: 1vmin 1vmin black; margin: 0vmin 0vmin 1vmin 4vmin; background-color: #004638; color: #f6f6f6;}
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes individualExpHover {
+  from {box-shadow: 0vmin 0vmin black; margin: 0vmin 0vmin 1vmin 5vmin; background-color: #f6f6f6; color: #004638;}
+  to {box-shadow: 1vmin 1vmin black; margin: 0vmin 0vmin 1vmin 4vmin; background-color: #004638; color: #f6f6f6;}
+}
+/* Internet Explorer */
+@-ms-keyframes individualExpHover {
+  from {box-shadow: 0vmin 0vmin black; margin: 0vmin 0vmin 1vmin 5vmin; background-color: #f6f6f6; color: #004638;}
+  to {box-shadow: 1vmin 1vmin black; margin: 0vmin 0vmin 1vmin 4vmin; background-color: #004638; color: #f6f6f6;}
+}
+/* Opera < 12.1 */
+@-o-keyframes individualExpHover {
+  from {box-shadow: 0vmin 0vmin black; margin: 0vmin 0vmin 1vmin 5vmin; background-color: #f6f6f6; color: #004638;}
+  to {box-shadow: 1vmin 1vmin black; margin: 0vmin 0vmin 1vmin 4vmin; background-color: #004638; color: #f6f6f6;}
+}
+
+.Top {
+  font-size: 2vh;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Middle {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.MiddleLeft {
+  color: #82bf00;
+}
+
+.Bottom {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.BottomLeft {
+  color: #82bf00;
+}

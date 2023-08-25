@@ -13,11 +13,11 @@ import SignedOutRoute from './Routes/signedOutRoute';
 
 
 function App() {
-  const [cookies, setCookie] = useCookies(['accessToken', 'user']);
+  const [cookies, setCookie] = useCookies(['accessToken']);
   useEffect(() => {
     if (cookies.accessToken) {
       getUserInfo(cookies.accessToken).then((result) => {
-        setCookie('user', result.data);
+        localStorage.setItem('user', JSON.stringify(result.data));
       }).catch((err) => {
         setCookie('accessToken', '');
         console.log(err, 'APP 2');
@@ -28,8 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <Navbar />
+      <Router>         
         {cookies.accessToken ?           
           <SignedInRoute/> :
           <SignedOutRoute/>
@@ -40,3 +39,4 @@ function App() {
 }
 
 export default App;
+

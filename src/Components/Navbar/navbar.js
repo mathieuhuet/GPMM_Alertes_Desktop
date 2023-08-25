@@ -1,5 +1,5 @@
 import './navbar.css';
-import { BiUserCircle } from "react-icons/bi";
+import { BiUserCircle, BiListUl } from "react-icons/bi";
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -12,13 +12,16 @@ It should always stay on screen.
 function Navbar() {
   return (
     <div className="Navbar">
-    <div className="Bottom">
+      <Link to='/'>
+        <div className="Main">
+          <BiListUl />
+        </div>
+      </Link>
       <Link to='/user'>
-        <div className="Users">
+        <div className="User">
           <BiUserCircle />
         </div>
       </Link>
-    </div>
     </div>
   );
 }

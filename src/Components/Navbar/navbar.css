@@ -10,15 +10,22 @@
   background-color: #004638;
 }
 
-.Bottom {
+.Main {
+  height: 99px;
+  width: 100px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #82bf00;
+  font-size: 36px;
   color: #82bf00;
 }
 
-.Users {
+.Main:hover {
+  cursor: pointer;
+}
+
+.User {
   height: 99px;
   width: 100px;
   display: flex;
@@ -29,12 +36,12 @@
   color: #82bf00;
 }
 
-.Users:hover {
+.User:hover {
   cursor: pointer;
 }
 
-.Users:active {
+.User:active {
   height: 94px;
   width: 94px;
-  border: 3px solid black;
+  border: 3px solid #004638;
 }
