@@ -1,15 +1,12 @@
 import './App.css';
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Navbar from './Components/Navbar/navbar';
 // Auth
 import { useCookies } from 'react-cookie';
-import { getUserInfo } from './Services/userServices/getUserInfo.ts';
+import { getUserInfo } from './Services/userServices/getUserInfo';
 // Auth routes
 import SignedInRoute from './Routes/signedInRoute';
 import SignedOutRoute from './Routes/signedOutRoute';
-
-
 
 
 function App() {
@@ -23,20 +20,19 @@ function App() {
         console.log(err, 'APP 2');
       })
     }
-  }, [cookies.accessToken])
+  }, [cookies.accessToken, setCookie])
 
 
   return (
     <div className="App">
-      <Router>         
-        {cookies.accessToken ?           
-          <SignedInRoute/> :
-          <SignedOutRoute/>
-        }
+      <Router>
+      {cookies.accessToken ?           
+        <SignedInRoute/> :
+        <SignedOutRoute/>
+      }   
       </Router>
     </div>
   );
 }
 
 export default App;
-

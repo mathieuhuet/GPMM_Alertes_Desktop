@@ -6,7 +6,6 @@ const RemNetwork = (props) => (
     shapeRendering="geometricPrecision"
     textRendering="geometricPrecision"
     viewBox="0 0 900 600"
-    {...props}
   >
     <circle
       r={35}
@@ -34,96 +33,112 @@ const RemNetwork = (props) => (
       fill="#004638"
       strokeWidth={0}
       transform="translate(120.823 123.615)"
+      onPress={props.GCTOnPress}
     />
     <circle
       r={30}
       fill="#004638"
       strokeWidth={0}
       transform="translate(476.385 479.177)"
+      onPress={props.RIVOnPress}
     />
     <circle
       r={30}
       fill="#004638"
       strokeWidth={0}
       transform="translate(230.227 232.006)"
+      onPress={props.IDSOnPress}
     />
     <circle
       r={30}
       fill="#004638"
       strokeWidth={0}
       transform="translate(361.636 364.428)"
+      onPress={props.PANOnPress}
     />
     <circle
       r={30}
       fill="#004638"
       strokeWidth={0}
       transform="translate(421.636 424.428)"
+      onPress={props.DUQOnPress}
     />
     <circle
       r={30}
       fill="#004638"
       strokeWidth={0}
       transform="translate(470.385 118.615)"
+      onPress={props.MSFOnPress}
     />
     <circle
       r={30}
       fill="#004638"
       strokeWidth={0}
       transform="translate(542.685 232.006)"
+      onPress={props.PCCOnPress}
     />
     <circle
       r={30}
       fill="#004638"
       strokeWidth={0}
       transform="translate(120.823 473.177)"
+      onPress={props.PCCROnPress}
     />
     <circle
       r={24}
-      fill="#f6f6f6"
+      fill={props.GCTColor ? props.GCTColor : '#f6f6f6'}
       strokeWidth={0}
       transform="translate(120.823 124.364)"
+      onPress={props.GCTOnPress}
     />
     <circle
       r={24}
-      fill="#f6f6f6"
+      fill={props.MSFColor ? props.MSFColor : '#f6f6f6'}
       strokeWidth={0}
       transform="translate(470.385 118.364)"
+      onPress={props.MSFOnPress}
     />
     <circle
       r={24}
-      fill="#f6f6f6"
+      fill={props.IDSColor ? props.IDSColor : '#f6f6f6'}
       strokeWidth={0}
       transform="translate(230.227 232.006)"
+      onPress={props.IDSOnPress}
     />
     <circle
       r={24}
-      fill="#f6f6f6"
+      fill={props.PCCColor ? props.PCCColor : '#f6f6f6'}
       strokeWidth={0}
       transform="translate(542.685 232.006)"
+      onPress={props.PCCOnPress}
     />
     <circle
       r={24}
-      fill="#f6f6f6"
+      fill={props.PANColor ? props.PANColor : '#f6f6f6'}
       strokeWidth={0}
       transform="translate(361.636 364.428)"
+      onPress={props.PANOnPress}
     />
     <circle
       r={24}
-      fill="#f6f6f6"
+      fill={props.PCCRColor ? props.PCCRColor : '#f6f6f6'}
       strokeWidth={0}
       transform="translate(120.823 473.177)"
+      onPress={props.PCCROnPress}
     />
     <circle
       r={24}
-      fill="#f6f6f6"
+      fill={props.DUQColor ? props.DUQColor : '#f6f6f6'}
       strokeWidth={0}
       transform="translate(421.636 424.428)"
+      onPress={props.DUQOnPress}
     />
     <circle
       r={24}
-      fill="#f6f6f6"
+      fill={props.RIVColor ? props.RIVColor : '#f6f6f6'}
       strokeWidth={0}
       transform="translate(476.385 479.177)"
+      onPress={props.RIVOnPress}
     />
     <text
       strokeWidth={0}

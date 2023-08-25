@@ -1,10 +1,10 @@
 import axios from 'axios';
-import { GPMM_USER_API } from '../../secret';
+import { GPMM_USER_API } from '../../sercret';
 const API = GPMM_USER_API
 ? GPMM_USER_API
 : 'http://192.168.1.5:10101/user';
 
-export const loginEmail = (credentials: any) => {
+export const loginEmail = (credentials) => {
   return new Promise((resolve, reject) => {
     console.log(API);
     axios.post(

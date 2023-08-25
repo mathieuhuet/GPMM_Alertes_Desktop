@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { Formik } from 'formik';
 import GPMM_LOGO from '../../Assets/GPMM_logo.webp';
 import EmailVerification from '../../Components/EmailVerification/emailVerification';
-import { loginEmail } from '../../Services/userServices/login.ts';
+import { loginEmail } from '../../Services/userServices/login';
 import Spinner from '../../Spinner';
 
 

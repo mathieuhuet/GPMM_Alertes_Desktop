@@ -9,6 +9,55 @@
   justify-content: flex-start;
 }
 
+.Stats {
+  color: #004638;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.Mineur {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.BlueCircle {
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
+  background-color: #0063bf;
+}
+
+.Important {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.YellowCircle {
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
+  background-color: #bcbf00;
+}
+
+.Urgent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.RedCircle {
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
+  background-color: #bf0000;
+}
+
+
 .ActivityList {
   display: flex;
   flex-direction: column;
@@ -17,6 +66,8 @@
 
 .ActivitySearch {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 

@@ -1,18 +1,20 @@
 import axios from 'axios';
-import { GPMM_USER_API } from '../../secret';
+import { GPMM_USER_API } from '../../sercret';
 const API = GPMM_USER_API
 ? GPMM_USER_API
 : 'http://192.168.1.5:10101/user';
 
-export const verifyUser = (data: any) => {
+
+export const logoutUser = (accessToken) => {
   return new Promise((resolve, reject) => {
     console.log(API);
     axios.post(
-      `${API}/verify`, 
-      data,
+      `${API}/logout`,
+      {data: 'no data'},
       {
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          'Authorization': `Bearer ${accessToken}`
         }
       }
     ).then((response) => {

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Formik } from 'formik';
 import { useCookies } from 'react-cookie';
-import { verifyUser } from '../../Services/userServices/verifyLoginCode.ts';
+import { verifyUser } from '../../Services/userServices/verifyLoginCode';
 import Spinner from '../../Spinner';
 
 /*

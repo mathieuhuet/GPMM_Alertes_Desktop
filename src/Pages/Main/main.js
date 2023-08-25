@@ -5,8 +5,9 @@ import { useCookies } from 'react-cookie';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../Components/Navbar/navbar';
 import RemNetwork from '../../Components/RemNetwork/remNetwork';
-import { fetchActivities } from '../../Services/activityServices/fetchActivities.ts';
+import { fetchActivities } from '../../Services/activityServices/fetchActivities';
 import ActivityBloc from '../../Components/ActivityBloc/activityBloc';
+import { sortDataFromActivities } from '../../Utilities/sortDataFromActivities';
 
 
 /*
@@ -23,43 +24,59 @@ function Main() {
   const [activities, setActivities] = useState([]);
   const [result, setResult] = useState([]);
   const [search, setSearch] = useState('');
+  const [activitiesStats, setActivitiesStats] = useState({
+    activityGCT: '',
+    activityIDS: '',
+    activityPAN: '',
+    activityDUQ: '',
+    activityRIV: '',
+    activityPCC: '',
+    activityPCCR: '',
+    activityMSF: '',
+    numberOfBlue: 0,
+    numberOfYellow: 0,
+    numberOfRed: 0
+  });
 
   useEffect(() => {
     const getActivities = async () => {
       try {
         const result = await fetchActivities(cookies.accessToken);
         setActivities(result.data);
+        setActivitiesStats(sortDataFromActivities(activities));
       } catch (error) {
         console.log(error);
       }
     }
     getActivities();
-  }, [cookies.accessToken])
+  }, []);
 
   const handleChangeSearch = (event) => {
     const { value } = event.target;
     setSearch(value);
   };
-  // useEffect(() => {
-  //   let res = [];
-  //   for (let i = 0; i < activities.length; i++) {
-  //     if (activities[i].institution.toLowerCase().indexOf(search.toLowerCase()) === -1) {
-  //       for (let j = 0; j < activities[i].languages.length; j++) {
-  //         if (activities[i].languages[j].toLowerCase().indexOf(search.toLowerCase()) === -1) {
-  //           //do nothing, no match
-  //         } else {
-  //           //leave the loop, we found a match.
-  //           j = activities[i].languages.length
-  //           res.push(activities[i]);
-  //         }
-  //       }
-  //     }
-  //     else {
-  //       res.push(activities[i]);
-  //     }
-  //   }
-  //   setResult(res);
-  // }, [search, activities])
+  useEffect(() => {
+    let res = [];
+    for (let i = 0; i < activities.length; i++) {
+      if (activities[i].title.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
+        res.push(activities[i]);
+      } else if (activities[i].site.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
+        res.push(activities[i]);
+      } else {
+        for (let j = 0; j < activities[i].employee.length; j++) {
+          if (activities[i].employee[j].toLowerCase().indexOf(search.toLowerCase()) === -1) {
+            //do nothing, no match
+          } else {
+            //leave the loop, we found a match.
+            j = activities[i].employee.length
+            res.push(activities[i]);
+          }
+        }
+      }
+    }
+    setResult(res);
+  }, [search, activities]);
+  console.log(activities);
   return(
     <div className='App'>
       <div>
@@ -76,13 +93,39 @@ function Main() {
               className='SearchBar'
             />
           </div>
+          <div className='Stats'>
+            <div className='Mineur'>
+              Alerte Mineur : {activitiesStats.numberOfBlue}&nbsp;
+              <div className='BlueCircle'>
+              </div>
+            </div>
+            <div className='Important'>
+              Alerte Importante : {activitiesStats.numberOfYellow}&nbsp;
+              <div className='YellowCircle'>
+              </div>
+            </div>
+            <div className='Urgent'>
+              Alerte Urgente : {activitiesStats.numberOfRed}&nbsp;
+              <div className='RedCircle'>
+              </div>
+            </div>
+          </div>
         </div>
         {!search &&
-          <RemNetwork />
+          <RemNetwork 
+            GCTColor={activitiesStats.activityGCT}
+            IDSColor={activitiesStats.activityIDS}
+            PANColor={activitiesStats.activityPAN}
+            DUQColor={activitiesStats.activityDUQ}
+            RIVColor={activitiesStats.activityRIV}
+            PCCColor={activitiesStats.activityPCC}
+            PCCRColor={activitiesStats.activityPCC}
+            MSFColor={activitiesStats.activityMSF}
+          />
         }
         {search &&
         <div className='ActivityList'>
-          {activities.map(activity => 
+          {result.map(activity => 
             <ActivityBloc
               title={activity.title}
               descripttion={activity.description}

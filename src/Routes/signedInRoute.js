@@ -2,7 +2,7 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 import User from '../Pages/User/user';
 import List from '../Pages/List/list';
-import DeviceDetails from '../Pages/DeviceDetails/deviceDetails';
+import ActivityDetails from '../Pages/ActivityDetails/activityDetails';
 import Main from '../Pages/Main/main';
 
 
@@ -16,12 +16,12 @@ const SignedInRoute = () => {
         element={<User />}
       />
       <Route
-        path="/devices"
+        path="/activities"
         element={<List />}
       />
       <Route 
-        path="/device/:id" 
-        element={<DeviceDetails />} 
+        path="/activity/:id" 
+        element={<ActivityDetails />} 
       />
       <Route 
         path="/" 

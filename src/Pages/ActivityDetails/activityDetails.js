@@ -1,4 +1,4 @@
-import './deviceDetails.css';
+import './activityDetails.css';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { BsArrowLeftShort } from "react-icons/bs";
