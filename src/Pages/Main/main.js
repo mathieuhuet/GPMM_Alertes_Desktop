@@ -62,6 +62,10 @@ function Main() {
         res.push(activities[i]);
       } else if (activities[i].site.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
         res.push(activities[i]);
+      } else if (activities[i].system.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
+        res.push(activities[i]);
+      } else if (activities[i].department.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
+        res.push(activities[i]);
       } else {
         for (let j = 0; j < activities[i].employee.length; j++) {
           if (activities[i].employee[j].toLowerCase().indexOf(search.toLowerCase()) === -1) {
@@ -94,8 +98,11 @@ function Main() {
             />
           </div>
           <div className='Stats'>
+            <div className='Alertes'>
+              Alertes en cours : 
+            </div>
             <div className='Mineur'>
-              Alerte Mineur : {activitiesStats.numberOfBlue}&nbsp;
+              Alerte Mineure : {activitiesStats.numberOfBlue}&nbsp;
               <div className='BlueCircle'>
               </div>
             </div>
@@ -134,6 +141,20 @@ function Main() {
               level={activity.level}
               type={activity.type}
               activityDate={activity.activityDate}
+              acquit={activity.acquit}
+              dateCreated={activity.dateCreated}
+              employee={activity.employee}
+              system={activity.system}
+              acquitCreator={activity.acquitCreator}
+              acquitDate={activity.acquitDate}
+              acquitHelp={activity.acquitHelp}
+              acquitEquipment={activity.acquitEquipment}
+              acquitDescription={activity.acquitDescription}
+              acquitResult={activity.acquitResult}
+              acquitObservation={activity.acquitObservation}
+              acquitComments={activity.acquitComments}
+              _id={activity._id}
+              creator={activity.creator}
             />
           )}
         </div>

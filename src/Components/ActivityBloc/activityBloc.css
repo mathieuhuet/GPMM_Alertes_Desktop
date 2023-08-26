@@ -7,7 +7,7 @@
   margin: 0vmin 0vmin 1vmin 5vmin;
   padding: 4vmin 4vmin 4vmin 4vmin;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   text-decoration: none;
   -webkit-animation: individualExp 0.25s; /* Safari, Chrome and Opera > 12.1 */
@@ -78,6 +78,14 @@
   to {box-shadow: 1vmin 1vmin black; margin: 0vmin 0vmin 1vmin 4vmin; background-color: #004638; color: #f6f6f6;}
 }
 
+.ActivityInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 50vw;
+}
+
 .Top {
   font-size: 2vh;
   display: flex;
@@ -106,4 +114,10 @@
 
 .BottomLeft {
   color: #82bf00;
+}
+
+.DownloadPDF {
+  margin-left: 5vw;
+  font-size: 3vw;
+  align-self: center;
 }
