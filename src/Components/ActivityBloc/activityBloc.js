@@ -157,20 +157,18 @@ function ActivityBloc (props) {
             {props.creator}
           </Text>
         </View>
-        {props.employee.length &&
+        {props.employee &&
         <View style={styles.section}>
           <Text
             style={styles.leftSection}
           >
             Assigné à 
           </Text>
-          {props.employee.map((emp) => 
-            <Text
+          <Text
             style={styles.rightSection}
           >
-            {emp}
+            {props.employee}
           </Text>
-          )}
         </View>
         }
         <View style={styles.section}>

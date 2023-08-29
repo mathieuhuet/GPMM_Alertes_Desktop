@@ -43,13 +43,16 @@ function Main() {
       try {
         const result = await fetchActivities(cookies.accessToken);
         setActivities(result.data);
-        setActivitiesStats(sortDataFromActivities(activities));
       } catch (error) {
         console.log(error);
       }
     }
     getActivities();
   }, []);
+
+  useEffect(() => {
+    setActivitiesStats(sortDataFromActivities(activities));
+  }, [activities]);
 
   const handleChangeSearch = (event) => {
     const { value } = event.target;
@@ -69,9 +72,9 @@ function Main() {
       } else {
         for (let j = 0; j < activities[i].employee.length; j++) {
           if (activities[i].employee[j].toLowerCase().indexOf(search.toLowerCase()) === -1) {
-            //do nothing, no match
+            // do nothing, no match
           } else {
-            //leave the loop, we found a match.
+            // leave the loop, we found a match.
             j = activities[i].employee.length
             res.push(activities[i]);
           }
